@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: teal;
+}
+
+.card{
+    width: 90%;
+    max-width: 900px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 70px auto 0;
+    border-radius: 20px;
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.search{
+    width: 50%;
+    display: flex;
+    justify-content: left;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 30px;
+    width: 70%;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.search img{
+    width: 12px;
+}
+
+.current {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    background: teal;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.current .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.current .right {
+    align-items: center;
+}
+
+.current .right img{
+    width: 80px;
+    margin-bottom: -10px;
+}
+
+.weather-icon{
+    width: 70px;
+    margin-bottom: 5px;
+}
+
+.weather h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+
+.left p{
+    font-size: 20px;
+    /* margin-top: -6px; */
+
+}
+
+/* .weather{
+    display: none;
+}
+
+.error{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #ff2f00c8;
+    margin-top: 10px;
+    display: none;
+} */
+
+.day-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 125px);
+    gap: 0.5em;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.day-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid hsla(208, 76%, 20%, 0.642);
+    border-radius: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+}
+
+.day-card img {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+}
+
+.day-card div {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1px;
+}
