@@ -37,7 +37,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
 
 // get weather data from api
 const getWeatherDetails = (cityName, lat, lon) => {
-    const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
         // An array that store one date of the day at time for 5 days
         const forecastDays = [];
@@ -70,7 +70,7 @@ const getCityData = () => {
     if(!cityInput) return;
     
 
-    const API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
+    const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
     fetch(API_URL).then(res =>res.json()).then(data =>{
         if(!data.length) return alert(`EN coordinates found for ${cityName}`)
@@ -87,7 +87,7 @@ const getUserLocation = () =>{
         position => {
             const {latitude, longitude} = position.coords;
             // URL that auto detect user latitude and longitude
-            const REVERSE_API_URL =`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`
+            const REVERSE_API_URL =`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`
             fetch(REVERSE_API_URL).then(res =>res.json()).then(data =>{
                 const { name} = data[0];
                 getWeatherDetails(name, latitude, longitude);
